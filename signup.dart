@@ -29,12 +29,13 @@ class _SignupPageState extends State<SignupPage> {
             ),
             isMaterialAppTheme: true,
             child: new Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new Image(
-                    image: new AssetImage('assets/math_logo3.png'),
-                  ),
-                  new Container(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                new Image(
+                  image: new AssetImage('assets/math_logo3.png'),
+                ),
+                Expanded(
+                  child: new Container(
                     padding: const EdgeInsets.all(30.0),
                     child: new Form(
                       autovalidate: true,
@@ -75,7 +76,9 @@ class _SignupPageState extends State<SignupPage> {
                       ),
                     ),
                   ),
-                ]),
+                ),
+              ],
+            ),
           ),
         ],
       ),

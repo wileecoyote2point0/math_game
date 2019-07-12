@@ -63,72 +63,69 @@ class LoginPageState extends State<LoginPage>
             ),
             isMaterialAppTheme: true,
             child: new Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 new Image(
                   image: new AssetImage("assets/math_logo3.png"),
                 ),
-                new Container(
-                  padding: EdgeInsets.all(20.0),
-                  child: new Form(
-                    autovalidate: true,
-                    child: new Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        new TextFormField(
-                          decoration: new InputDecoration(
-                            labelText: "Enter Email",
-                            fillColor: Colors.white,
-                          ),
-                          keyboardType: TextInputType.emailAddress,
-                        ),
-                        new TextFormField(
-                          decoration: new InputDecoration(
-                            labelText: "Enter Password",
-                            fillColor: Colors.white,
-                          ),
-                          obscureText: true,
-                          keyboardType: TextInputType.text,
-                        ),
-                        new Padding(
-                          padding: const EdgeInsets.only(top: 20.0),
-                        ),
-                        new MaterialButton(
-                            color: Colors.teal,
-                            textColor: Colors.white,
-                            child: new Text("Login"),
-                            onPressed: () => {}),
-                        SizedBox(height: 50.0),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              "New to Math Messenger ?",
-                              style: TextStyle(
-                                  color: Colors.grey,
-                                  decoration: TextDecoration.underline),
-                            )
-                          ],
-                        ),
-                        SizedBox(height: 20.0),
-                        InkWell(
-                          onTap: () {
-                            Navigator.of(context).pushNamed('/signup');
-                          },
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              "Register",
-                              style: TextStyle(
-                                color: Colors.tealAccent,
-                                decoration: TextDecoration.underline,
-                              ),
+                Expanded(
+                  child: new Container(
+                    padding: EdgeInsets.only(left: 40.0, right: 40.0),
+                    child: new Form(
+                      autovalidate: true,
+                      child: new Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          new TextFormField(
+                            decoration: new InputDecoration(
+                              labelText: "Enter Email",
+                              fillColor: Colors.white,
                             ),
-                          ],
-                        ),
-                      ],
+                            keyboardType: TextInputType.emailAddress,
+                          ),
+                          new TextFormField(
+                            decoration: new InputDecoration(
+                              labelText: "Enter Password",
+                              fillColor: Colors.white,
+                            ),
+                            obscureText: true,
+                            keyboardType: TextInputType.text,
+                          ),
+                          new Padding(
+                            padding: const EdgeInsets.all(20.0),
+                          ),
+                          new MaterialButton(
+                              color: Colors.teal,
+                              textColor: Colors.white,
+                              child: new Text("Login"),
+                              onPressed: () => {}),
+                          new SizedBox(width: 20.0, height: 5.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                "New to Math Messenger ?",
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    decoration: TextDecoration.underline),
+                              )
+                            ],
+                          ),
+                          new SizedBox(width: 5.0, height: 10.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                "Register",
+                                style: TextStyle(
+                                  color: Colors.tealAccent,
+                                  decoration: TextDecoration.underline,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 )
